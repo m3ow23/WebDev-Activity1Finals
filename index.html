@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Variable Manipulation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <h1>Variable Manipulation</h1>
+
+    <h2>Arithmetic manipulation</h2>
+    <div class="arithmetic-manipulation">
+        <input id="arithmetic-manipulation-num1" onkeyup="calculateArithmeticManipulation()">
+        <select class="arithmetic-manipulation-operator" id="arithmetic-manipulation-operator" onchange="calculateArithmeticManipulation()">
+            <option value="+"selected>+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        <input id="arithmetic-manipulation-num2" onkeyup=calculateArithmeticManipulation()>
+        <span>=</span>
+        <p class="arithmetic-manipulation-output" id="arithmetic-manipulation-output">Invalid Input</p>
+    </div>
+
+    <h2>String manipulation</h2>
+    <div class="string-manipulation">
+        <span id="string-manipulation-str1-length">String 1 length: 0</span>
+        <span class="string-manipulation-str2-length" id="string-manipulation-str2-length">String 2 length: 0</span>
+        <div class="operation-container">
+            <input id="string-manipulation-str1" onkeyup="calculateStringManipulation()">
+            <span class="operator">+</span>
+            <input id="string-manipulation-str2" onkeyup=calculateStringManipulation()>
+            <span>=</span>
+        </div>
+        <p class="string-manipulation-output" id="string-manipulation-output">Empty Input</p>
+    </div>
+
+    <h2>Boolean/Logical Manipulation</h2>
+    <div class="boolean-logical-manipulation">
+        <div class="input">
+            <div class="one">
+                <label>Negation:</label>
+                <input id="boolean-logical-manipulation-input1-negation" type="checkbox" onchange="calculateBooleanLogicalManipulation()">
+                <label>Input 1: </label>
+                <input id="boolean-logical-manipulation-input1" type="checkbox" onchange="calculateBooleanLogicalManipulation()">
+                <span id="boolean-logical-manipulation-input1-label">= false</span>
+            </div>
+            <div class="two">
+                <label>Negation:</label>
+                <input id="boolean-logical-manipulation-input2-negation" type="checkbox" onchange="calculateBooleanLogicalManipulation()"">
+                <label>Input 2: </label>
+                <input id="boolean-logical-manipulation-input2" type="checkbox" onchange="calculateBooleanLogicalManipulation()">
+                <span id="boolean-logical-manipulation-input2-label">= false</span>
+            </div>
+        </div>
+        <div class="output">
+            <p id="boolean-logical-manipulation-output-AND">AND: false</p>
+            <p id="boolean-logical-manipulation-output-OR">OR: false</p>
+        </div>
+    </div>
+
+    <h1>Control Flow and Conditional Statements</h1>
+
+    <h2>If Else Statement</h2>
+    <div class="if-else-statement">
+        <input id="if-else-statement-num1" onkeyup="calculateIfElse()">
+        <select class="if-else-statement-operator" id="if-else-statement-operator" onchange="calculateIfElse()">
+            <option value="less" selected>&lt</option>
+            <option value="greater">&gt</option>
+            <option value="less-equal">&lt=</option>
+            <option value="greater-equal">&gt=</option>
+            <option value="equal">==</option>
+        </select>
+        <input id="if-else-statement-num2" onkeyup=calculateIfElse()>
+        <span class="equal">=</span>
+        <p class="output" id="if-else-statement-output">Invalid Input</p>
+    </div>
+
+    <h2>Switch Statement</h2>
+    <div class="switch-statement">
+        <label>Day of Week: </label>
+        <input id="switch-statement-input" onkeyup="calculateSwitchStatement()">
+        <span>=</span>
+        <p id="switch-statement-output">Invalid Day</p>
+    </div>
+
+    <h2>Ternary Operators</h2>
+    <div class="ternary-operator">
+        <label>Input: </label>
+        <input id="ternary-operator-input" type="checkbox" onchange="calculateTernaryOperator()">
+        <span>? print('I am a cat') : print('I am a dog')</span>
+        <p id="ternary-operator-output">I am a dog</p>
+    </div>
+
+    <h1>Loop and Iteration</h1>
+
+    <h2>For Loop</h2>
+    <script>
+        for (let i = 0; i <= 5; i++) {
+            document.write("For loop count: " + i + "<br>");
+        }
+    </script>
+
+    <h2>While Loop</h2>
+    <script>
+        let whileCount = 0
+
+        while (whileCount <= 5) {
+            document.write("While loop count: " + whileCount + "<br>");
+            whileCount++;
+        }
+    </script>
+
+    <h2>Do While Loop</h2>
+    <script>
+        let doWhileCount = 1;
+
+        do {
+            document.write("Do While loop count: " + doWhileCount + "<br>");
+            doWhileCount++;
+        } while (doWhileCount <= 5);
+    </script>
+</body>
+
+</html>
