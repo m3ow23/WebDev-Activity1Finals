@@ -101,31 +101,16 @@
     <h1>Loop and Iteration</h1>
 
     <h2>For Loop</h2>
-    <script>
-        for (let i = 0; i <= 5; i++) {
-            document.write("For loop count: " + i + "<br>");
-        }
-    </script>
+	<input id="forloop-input" onkeyup="calculateForLoopIterate()">
+	<p id="forloop-output">Loop length shown here.</p>
 
     <h2>While Loop</h2>
-    <script>
-        let whileCount = 0
-
-        while (whileCount <= 5) {
-            document.write("While loop count: " + whileCount + "<br>");
-            whileCount++;
-        }
-    </script>
+	<input id="whileloop-input" onkeyup="calculateWhileLoopIterate()">
+	<p id="whileloop-output">Loop length shown here.</p>
 
     <h2>Do While Loop</h2>
-    <script>
-        let doWhileCount = 1;
-
-        do {
-            document.write("Do While loop count: " + doWhileCount + "<br>");
-            doWhileCount++;
-        } while (doWhileCount <= 5);
-    </script>
+	<input id="dowhileloop-input" onkeyup="calculateDowhileLoopIterate()">
+	<p id="dowhileloop-output">Loop length shown here.</p>
 </body>
 
 </html>

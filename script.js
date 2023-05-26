@@ -170,3 +170,55 @@ function calculateTernaryOperator() {
     }
 }
 
+function calculateForLoopIterate() {
+    const forLoopInput = parseInt(document.getElementById('forloop-input').value)
+	const forLoopOutput = document.getElementById('forloop-output')
+	let output = "";
+
+    for (let i = 0; i <= forLoopInput; i++) {
+            output += "For loop count: " + i + "<br>";
+			
+			if(i > 50){
+				output = "For loop count: " + i + "+<br>";	
+				break;
+			}
+        }
+		
+	forLoopOutput.innerHTML = output;
+}
+
+function calculateWhileLoopIterate() {
+    const whileLoopInput = parseInt(document.getElementById('whileloop-input').value)
+	const whileLoopOutput = document.getElementById('whileloop-output')
+	let output = "";
+    let whileCount = 0
+		
+	 while (whileCount <= whileLoopInput) {
+            output += "While loop count: " + whileCount + "<br>";
+            whileCount++;
+			if(whileCount > 50){
+				output = "While loop count: " + whileCount + "+<br>";	
+				break;
+			}
+     }
+		
+	whileLoopOutput.innerHTML = output;
+}
+
+function calculateDowhileLoopIterate() {
+    const dowhileLoopInput = parseInt(document.getElementById('dowhileloop-input').value)
+	const dowhileLoopOutput = document.getElementById('dowhileloop-output')
+	let output = "";
+    let dowhileCount = 1
+		
+	 do {
+            output += "Do While loop count: " + dowhileCount + "<br>";
+            dowhileCount++;
+			if(dowhileCount > 50){
+				output = "Do while loop count: " + dowhileCount + "+<br>";	
+				break;
+			}
+        } while (dowhileCount <= dowhileLoopInput);
+		
+	dowhileLoopOutput.innerHTML = output;
+}
